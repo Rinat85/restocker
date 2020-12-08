@@ -1,0 +1,74 @@
+.jumbotron-section {
+    padding: 112px 0 210px 0;
+    background-image: url("../images/jumbotron-bg.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    object-fit: contain;
+
+    @include mq("phone", max) {
+        background-position: center center;
+    }
+
+    .jumbotron-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include mq("desktop", max) {
+            justify-content: center;
+        }
+
+        @include mq("tablet", max) {
+            justify-content: space-around;
+            margin: 0 12px;
+        }
+
+        @include mq("phone", max) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__text {
+            max-width: 520px;
+            @include article-heading;
+            letter-spacing: 0.01em;
+
+            @include mq("tablet", max) {
+                margin: 0 12px;
+            }
+
+            @include mq("phone", max) {
+                text-align: center;
+                margin: 0 5px 32px 5px;
+            }
+
+            @include mq("phone-sm", max) {
+                font-size: 2.2rem;
+            }
+
+            span {
+                color: #f4d366;
+            }
+        }
+
+        &__btn {
+            @include mq("desktop", max) {
+                margin-left: 104px;
+            }
+
+            @include mq("tablet", max) {
+                margin: 0 12px;
+            }
+
+            a {
+                @include primary-btn(primary, rounded);
+            }
+        }
+    }
+}
+
+.bottom-jumbotron {
+    @include mq("phone", max) {
+        margin-bottom: 54px;
+    }
+}

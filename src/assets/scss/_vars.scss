@@ -1,0 +1,34 @@
+// COLORS
+$bg-color--page: #ffffff;
+$bg-color--line: #13c296;
+$font-color--primary: #ffffff;
+$font-color--secondary: #000000;
+$font-color--paragraph: #637381;
+$font-color--hero: #3f4cc0;
+
+// BACKGROUND STYLES
+$bg-color--btn-primary: radial-gradient(63.67% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%),
+    #13c296;
+$bg-color--btn-hero: radial-gradient(63.67% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(180deg, #faeb69 0%, #f4d366 100%);
+$bg-color--btn-secondary: radial-gradient(
+        63.67% 100% at 50% 0%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+    ),
+    #ffcc62;
+
+// SIZES
+$font-size--primary: 1.4rem;
+
+// Z-INDEXES
+$z-index--header: 500;
+
+// WIDTHS
+$container-width: 1216px;
+$desktop-width--lg: 1920px;
+$desktop-width--md: 1440px;
+$desktop-width--sm: 1280px;
+$tablet-width: 1024px;
+$phone-width: 768px;
+$phone-width--sm: 480px;

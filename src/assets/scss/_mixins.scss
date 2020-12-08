@@ -1,0 +1,86 @@
+$breakpoints: (
+    "phone-sm": 375px,
+    "phone": 480px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1280px,
+    "desktop-wide": 1440px,
+);
+
+@mixin primary-btn($theme, $rounded: false, $fsz: 1.6rem) {
+    display: inline-block;
+    padding: 1em 2.9em;
+
+    text-align: center;
+    line-height: 1.1;
+    font-size: $fsz;
+
+    @if $theme == "primary" {
+        background: $bg-color--btn-primary;
+        box-shadow: 0px 15px 25px rgba(19, 194, 150, 0.25);
+    }
+    @if $theme == "secondary" {
+        background: $bg-color--btn-secondary;
+        box-shadow: 0px 15px 25px rgba(255, 204, 98, 0.25);
+    }
+    @if $theme == "hero" {
+        background: $bg-color--btn-hero;
+        box-shadow: 0px 15px 25px rgba(244, 211, 102, 0.25);
+    }
+    @if $rounded {
+        border-radius: 0.8em;
+    }
+}
+
+@mixin section-heading($theme: "light", $pos: left) {
+    @if $theme == "dark" {
+        color: $font-color--secondary;
+    }
+    @if $theme == "light" {
+        color: $font-color--primary;
+    }
+    text-align: $pos;
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+    font-weight: bold;
+    letter-spacing: -0.01em;
+}
+
+@mixin article-heading($theme: "light", $pos: left) {
+    @if $theme == "dark" {
+        color: $font-color--secondary;
+    }
+    @if $theme == "light" {
+        color: $font-color--primary;
+    }
+    text-align: $pos;
+    font-size: 2.8rem;
+    line-height: 1.5;
+    font-weight: bold;
+    letter-spacing: -0.01em;
+}
+
+@mixin text($theme: "dark", $fsz: 1.8rem, $lh: 1.45, $pos: left) {
+    @if $theme == "dark" {
+        color: $font-color--paragraph;
+    }
+    @if $theme == "light" {
+        color: $font-color--primary;
+    }
+    text-align: $pos;
+    font-size: $fsz;
+    line-height: $lh;
+    font-weight: normal;
+}
+
+@mixin mq($width, $type: min) {
+    @if map-has-key($breakpoints, $width) {
+        $width: map-get($breakpoints, $width);
+        // @if $type == max {
+        //     $width: $width - 1px;
+        // }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

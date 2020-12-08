@@ -1,0 +1,199 @@
+.hero-section {
+    width: 100%;
+    height: 774px;
+    padding: 17.9rem 0 0 0;
+
+    background-image: url("../images/hero-bg.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 1692px 750px;
+
+    @include mq("desktop-wide", max) {
+        background-position: left 90% top;
+    }
+
+    @include mq("desktop", max) {
+        background-position: left 64% top;
+    }
+
+    @include mq("tablet", max) {
+        padding: 12.5rem 0 0 0;
+        background-position: left 90% top;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+
+        @include mq("desktop", max) {
+            margin: 0 24px;
+        }
+
+        @include mq("tablet-wide", max) {
+            justify-content: center;
+        }
+
+        @include mq("tablet", max) {
+            flex-direction: column;
+            justify-content: center;
+            max-width: 570px;
+            margin: 0 auto;
+        }
+
+        &:before {
+            content: url("../images/dotted-square.png");
+            display: block;
+            width: 94px;
+            height: 88px;
+            position: absolute;
+            top: 70%;
+            left: -5%;
+
+            @include mq("tablet", max) {
+                top: 58%;
+                left: -22%;
+            }
+
+            @include mq("phone", max) {
+                top: 60%;
+                left: -7%;
+            }
+        }
+
+        &:after {
+            content: url("../images/dotted-square.png");
+            display: block;
+            width: 94px;
+            height: 88px;
+            position: absolute;
+            top: -10%;
+            right: 0;
+
+            @include mq("tablet", max) {
+                top: 0;
+                right: -96px;
+            }
+
+            @include mq("phone", max) {
+                right: 5%;
+            }
+        }
+
+        .hero-section__text {
+            width: 50%;
+
+            @include mq("tablet-wide", max) {
+                margin-left: 32px;
+            }
+
+            @include mq("tablet", max) {
+                width: 100%;
+                margin: 0;
+            }
+
+            &-title {
+                padding: 64px 0 48px 0;
+                @include section-heading;
+
+                @include mq("tablet", max) {
+                    text-align: center;
+                }
+
+                @include mq("phone", max) {
+                    font-size: 2.8rem;
+                    line-height: 3.3rem;
+                    padding: 64px 27px 48px 27px;
+                }
+
+                @include mq("phone-sm", max) {
+                    font-size: 2.4rem;
+                    padding: 64px 8px 48px 8px;
+                }
+            }
+
+            &-subtitle {
+                max-width: 468px;
+
+                @include text(light);
+                letter-spacing: 0.02em;
+
+                @include mq("tablet", max) {
+                    text-align: center;
+                    margin: 0 auto;
+                }
+
+                @include mq("phone", max) {
+                    max-width: 370px;
+                }
+            }
+
+            &-logo {
+                width: 170px;
+                height: 30px;
+                margin: 50px 0 0 0;
+
+                @include mq("tablet", max) {
+                    margin: 20px auto 0;
+                }
+            }
+        }
+
+        .hero-section__card {
+            width: 50%;
+            padding: 0 0 0 26px;
+
+            @include mq("tablet-wide", max) {
+                padding: 0;
+            }
+
+            @include mq("tablet", max) {
+                width: 100%;
+                text-align: center;
+            }
+
+            img {
+                width: 488px;
+                height: 397px;
+
+                @include mq("tablet", max) {
+                    margin: 17px auto 0;
+                }
+
+                @include mq("phone", max) {
+                    width: 347px;
+                    height: 100%;
+                    margin-bottom: 72px;
+                }
+            }
+
+            &-btn {
+                position: relative;
+                margin: 0 0 0 142px;
+
+                @include primary-btn(hero, rounded);
+                color: $font-color--hero;
+
+                @include mq("tablet", max) {
+                    margin: 0 auto;
+                }
+
+                &:before {
+                    content: url("../images/vector.svg");
+                    display: inline-block;
+                    position: absolute;
+                    left: -15%;
+                    top: -165%;
+
+                    @include mq("tablet", max) {
+                        content: url("../images/vector-768.svg");
+                    }
+
+                    @include mq("phone", max) {
+                        left: 30%;
+                    }
+                }
+            }
+        }
+    }
+}

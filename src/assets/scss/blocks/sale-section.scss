@@ -1,0 +1,44 @@
+.sale-section {
+    padding: 112px 0 232px 0;
+    background-image: url("../images/sale-bg.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    object-fit: contain;
+
+    @include mq("phone", max) {
+        background-position: center center;
+    }
+
+    .sale-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include mq("phone", max) {
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        &__text {
+            max-width: 507px;
+            @include text(light);
+            font-weight: 500;
+            letter-spacing: 0.01em;
+
+            @include mq("tablet", max) {
+                max-width: 432px;
+            }
+
+            @include mq("phone", max) {
+                text-align: center;
+                margin-bottom: 36px;
+            }
+        }
+
+        &__btn {
+            a {
+                @include primary-btn(secondary, rounded);
+            }
+        }
+    }
+}

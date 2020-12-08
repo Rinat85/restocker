@@ -1,0 +1,182 @@
+.footer {
+    margin: 175px 0 0 0;
+    padding: 81px 0 160px 0;
+    background-color: #3744bd;
+
+    @include mq("phone", max) {
+        display: none;
+    }
+
+    &-top {
+        position: relative;
+        display: flex;
+        padding: 0 0 80px 0;
+
+        border-bottom: 1px solid rgba(#ffffff, 0.1);
+
+        @include mq("tablet-wide", max) {
+            max-width: 707px;
+            margin: 0 auto;
+        }
+
+        @include mq("tablet-wide", max) {
+            margin: 0 auto;
+        }
+
+        @include mq("tablet", max) {
+            display: none;
+        }
+
+        &__logo {
+            display: none;
+            width: 100px;
+            height: 47px;
+
+            @include mq("tablet-wide", max) {
+                display: block;
+                position: absolute;
+                top: 47px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @include mq("tablet-wide", max) {
+            justify-content: flex-end;
+            align-items: center;
+            align-content: center;
+            padding: 153px 0 80px 0;
+        }
+
+        &__item {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 32px 0 0;
+
+            @include mq("tablet", max) {
+                width: 33%;
+                height: 100%;
+                margin: 0 0 0 32px;
+            }
+
+            &-logo {
+                width: 100px;
+                height: 47px;
+                align-self: center;
+            }
+
+            &-btn {
+                @include primary-btn(primary, rounded, 1.4rem);
+            }
+
+            &-title {
+                margin: 0 0 43px 0;
+
+                @include text(light, 1.8rem, 2.1rem);
+                font-weight: 600;
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+
+                li {
+                    margin: 0 0 19px 0;
+
+                    a {
+                        @include text(light, 1.4rem, 1.7rem);
+
+                        .icon {
+                            display: inline-block;
+                            width: 17px;
+                            height: 17px;
+                            margin: 0 14.5px 0 0;
+
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            background-size: contain;
+
+                            vertical-align: middle;
+                        }
+
+                        .email {
+                            background-image: url("../images/icon-email.svg");
+                        }
+
+                        .phone {
+                            background-image: url("../images/icon-phone.svg");
+                        }
+                    }
+
+                    .footer-top__item-line {
+                        display: block;
+                        width: 136px;
+                        height: 4px;
+
+                        background-color: #f4d366;
+
+                        @include mq("tablet", max) {
+                            margin: 6.5px 0;
+                        }
+                    }
+
+                    .footer-top__item-empty {
+                        display: block;
+                        height: 4px;
+
+                        @include mq("tablet", max) {
+                            margin: 2px 0 16px;
+                        }
+                    }
+                }
+
+                li:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        &__item:nth-child(2) {
+            @include mq("tablet-wide", max) {
+                display: none;
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 48px 0 0 0;
+
+        @include mq("tablet-wide", max) {
+            max-width: 707px;
+            margin: 0 auto;
+        }
+
+        @include mq("tablet", max) {
+            display: none;
+        }
+
+        .copyright {
+            width: 100%;
+            @include text(light, 1.4rem, 1.7rem);
+            opacity: 0.2;
+        }
+
+        .payments {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+
+            .payment {
+                height: 20px;
+                margin: 0 0 0 24px;
+            }
+        }
+    }
+}

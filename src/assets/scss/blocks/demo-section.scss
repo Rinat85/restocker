@@ -1,0 +1,89 @@
+.demo-section {
+    padding: 164px 0 206px 0;
+
+    @include mq("tablet", max) {
+        padding: 164px 0 153px 0;
+    }
+
+    @include mq("phone", max) {
+        padding: 64px 0 63px 0;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 102px 0;
+
+        &-text {
+            max-width: 626px;
+            margin-left: 20%;
+            position: relative;
+            @include text;
+
+            @include mq("tablet", max) {
+                margin: 0 auto;
+            }
+
+            @include mq("phone", max) {
+                margin: 0 22px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: -2.9rem;
+
+                display: block;
+                width: 67px;
+                height: 2px;
+
+                background-color: $bg-color--line;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-text {
+            max-width: 422px;
+            position: relative;
+            @include text($pos: center);
+
+            @include mq("phone", max) {
+                margin: 0 28px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: -2.9rem;
+                transform: translateX(-50%);
+
+                display: block;
+                width: 67px;
+                height: 2px;
+
+                background-color: $bg-color--line;
+            }
+        }
+
+        &-video {
+            margin: 48px 0 27px 0;
+
+            @include mq("phone", max) {
+                margin: 48px 20px 27px 20px;
+            }
+        }
+
+        a {
+            text-decoration: underline;
+            color: #3744bd;
+        }
+    }
+}

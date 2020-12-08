@@ -1,0 +1,106 @@
+.advantages-section {
+    padding: 162px 0 0 0;
+
+    @include mq("tablet", max) {
+        padding: 162px 0 0 0;
+    }
+
+    @include mq("phone", max) {
+        padding: 22px 0 0 0;
+    }
+
+    @include mq("phone", max) {
+        padding: 0;
+    }
+
+    &__title {
+        position: relative;
+        margin: 0 0 110px 313px;
+        @include section-heading(dark);
+
+        @include mq("tablet", max) {
+            margin: 0 0 0 20px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 150%;
+
+            display: block;
+            width: 67px;
+            height: 2px;
+
+            background-color: $bg-color--line;
+        }
+    }
+
+    .advanateges-wrap {
+        margin: 0 0 0 313px;
+
+        @include mq("tablet-wide", max) {
+            margin: 0 0 110px 216px;
+        }
+
+        @include mq("tablet", max) {
+            margin: 110px 0 0 20px;
+        }
+
+        @include mq("phone", max) {
+            margin: 110px 20px 0 20px;
+        }
+
+        .advantages-item {
+            margin: 0 0 150px 0;
+
+            @include mq("phone", max) {
+                margin: 0 0 70px 0;
+            }
+
+            &__title {
+                margin: 0 0 34px 0;
+                @include article-heading(dark);
+                line-height: 3.4rem;
+                letter-spacing: 0.01em;
+
+                @include mq("phone", max) {
+                    font-size: 2.4rem;
+                }
+            }
+
+            &__text {
+                @include text(dark, 1.6rem);
+            }
+
+            &__img {
+                max-width: 358px;
+                margin: 28px 0 0 0;
+            }
+        }
+
+        .advantages-item:nth-child(1) .advantages-item__text {
+            max-width: 506px;
+        }
+
+        .advantages-item:nth-child(2) .advantages-item__text {
+            max-width: 570px;
+        }
+
+        .advantages-item:nth-child(3) .advantages-item__text {
+            max-width: 591px;
+        }
+
+        .advantages-item:nth-child(4) .advantages-item__text {
+            max-width: 592px;
+        }
+
+        .advantages-item:nth-child(5) .advantages-item__text {
+            max-width: 592px;
+        }
+
+        .advantages-item:nth-child(6) .advantages-item__text {
+            max-width: 592px;
+        }
+    }
+}
