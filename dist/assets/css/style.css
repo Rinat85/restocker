@@ -1177,7 +1177,7 @@ a {
 }
 
 .demo-section {
-    padding: 164px 0 206px 0;
+    padding: 164px 0 0 0;
 }
 
 @media only screen and (max-width: 768px) {
