@@ -4,7 +4,7 @@
     background-color: #3744bd;
 
     @include mq("phone", max) {
-        display: none;
+        margin: 0;
     }
 
     &-top {
@@ -17,14 +17,17 @@
         @include mq("tablet-wide", max) {
             max-width: 707px;
             margin: 0 auto;
+            justify-content: flex-end;
+            align-items: center;
+            align-content: center;
+            padding: 153px 0 80px 0;
         }
 
-        @include mq("tablet-wide", max) {
-            margin: 0 auto;
-        }
-
-        @include mq("tablet", max) {
-            display: none;
+        @include mq("phone", max) {
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
         }
 
         &__logo {
@@ -41,13 +44,6 @@
             }
         }
 
-        @include mq("tablet-wide", max) {
-            justify-content: flex-end;
-            align-items: center;
-            align-content: center;
-            padding: 153px 0 80px 0;
-        }
-
         &__item {
             width: 25%;
             display: flex;
@@ -59,6 +55,11 @@
                 width: 33%;
                 height: 100%;
                 margin: 0 0 0 32px;
+            }
+
+            @include mq("phone", max) {
+                margin: 0 0 28px 0;
+                width: 50%;
             }
 
             &-logo {
@@ -76,6 +77,11 @@
 
                 @include text(light, 1.8rem, 2.1rem);
                 font-weight: 600;
+
+                @include mq("phone", max) {
+                    text-align: center;
+                    margin: 0 0 13px 0;
+                }
             }
 
             &-list {
@@ -122,6 +128,10 @@
                         @include mq("tablet", max) {
                             margin: 6.5px 0;
                         }
+
+                        @include mq("phone", max) {
+                            margin: 6.5px auto;
+                        }
                     }
 
                     .footer-top__item-empty {
@@ -158,14 +168,22 @@
             margin: 0 auto;
         }
 
-        @include mq("tablet", max) {
-            display: none;
+        @include mq("phone", max) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            text-align: center;
         }
 
         .copyright {
             width: 100%;
             @include text(light, 1.4rem, 1.7rem);
             opacity: 0.2;
+
+            @include mq("phone", max) {
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+            }
         }
 
         .payments {
@@ -173,9 +191,22 @@
             justify-content: flex-end;
             width: 100%;
 
+            @include mq("phone", max) {
+                width: 50%;
+                margin: 0 auto;
+                justify-content: center;
+                margin-bottom: 34px;
+            }
+
             .payment {
                 height: 20px;
                 margin: 0 0 0 24px;
+            }
+        }
+
+        .payments .payment:first-child {
+            @include mq("phone", max) {
+                margin-left: 0;
             }
         }
     }
