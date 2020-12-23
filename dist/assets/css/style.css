@@ -1172,7 +1172,7 @@ a {
 
 @media only screen and (max-width: 480px) {
     .bottom-jumbotron {
-        margin-bottom: 54px;
+        margin-bottom: 0;
     }
 }
 
@@ -1503,6 +1503,7 @@ a {
 @media only screen and (max-width: 480px) {
     .footer {
         margin: 0;
+        padding: 0 0 50px 0;
     }
 }
 
@@ -1537,6 +1538,7 @@ a {
         -ms-flex-line-pack: center;
         align-content: center;
         text-align: center;
+        padding: 140px 0 0 0;
     }
 }
 
@@ -1578,7 +1580,7 @@ a {
 
 @media only screen and (max-width: 480px) {
     .footer-top__item {
-        margin: 0 0 28px 0;
+        margin: 0 0 48px 0;
         width: 50%;
     }
 }
@@ -1638,6 +1640,19 @@ a {
     font-size: 1.4rem;
     line-height: 1.7rem;
     font-weight: normal;
+    transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-top__item-list li a {
+        opacity: 0.6;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-top__item-list li a:hover {
+        opacity: 1;
+    }
 }
 
 .footer-top__item-list li a .icon {
@@ -1762,9 +1777,21 @@ a {
     }
 }
 
+@media only screen and (max-width: 375px) {
+    .footer-bottom .payments {
+        width: 80%;
+    }
+}
+
 .footer-bottom .payments .payment {
     height: 20px;
     margin: 0 0 0 24px;
+}
+
+@media only screen and (max-width: 375px) {
+    .footer-bottom .payments .payment {
+        margin: 0 0 0 12px;
+    }
 }
 
 @media only screen and (max-width: 480px) {

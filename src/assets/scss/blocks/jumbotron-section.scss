@@ -69,6 +69,6 @@
 
 .bottom-jumbotron {
     @include mq("phone", max) {
-        margin-bottom: 54px;
+        margin-bottom: 0;
     }
 }
