@@ -46,6 +46,11 @@
                 font-size: 2.2rem;
             }
 
+            @media screen and (min-width: 481px) and (max-width: 590px) {
+                font-size: 2.4rem;
+                padding-left: 18px;
+            }
+
             span {
                 color: #f4d366;
             }
@@ -60,8 +65,17 @@
                 margin: 0 12px;
             }
 
+            @media screen and (min-width: 481px) and (max-width: 590px) {
+                max-width: 40%;
+            }
+
             a {
                 @include primary-btn(primary, rounded);
+
+                @media screen and (min-width: 481px) and (max-width: 590px) {
+                    max-width: 100%;
+                    padding: 1em;
+                }
             }
         }
     }

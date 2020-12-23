@@ -32,6 +32,12 @@
             padding: 140px 0 0 0;
         }
 
+        @media screen and (min-width: 481px) and (max-width: 590px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: stretch;
+        }
+
         &__logo {
             display: none;
             width: 100px;
@@ -47,21 +53,28 @@
         }
 
         &__item {
-            width: 25%;
+            width: 20%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            margin: 0 32px 0 0;
+            padding: 0 24px 0;
 
-            @include mq("tablet", max) {
-                width: 33%;
+            @include mq("tablet-wide", max) {
+                width: 25%;
                 height: 100%;
-                margin: 0 0 0 32px;
+                padding: 0 0 0 28px;
             }
 
             @include mq("phone", max) {
-                margin: 0 0 48px 0;
+                padding: 0 0 48px 0;
                 width: 50%;
+            }
+
+            @media screen and (min-width: 481px) and (max-width: 590px) {
+                width: 40%;
+                height: 100%;
+                justify-content: flex-start;
+                padding: 34px 0 0 0;
             }
 
             &-logo {
@@ -72,6 +85,7 @@
 
             &-btn {
                 @include primary-btn(primary, rounded, 1.4rem);
+                padding: 1em;
             }
 
             &-title {
@@ -164,6 +178,8 @@
         }
 
         &__item:nth-child(2) {
+            padding: 0;
+
             @include mq("tablet-wide", max) {
                 display: none;
             }
